@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <h1>To-Do List</h1>
+      <button id="toggleTheme">🌙</button>
+    </div>
+
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Enter a task..." />
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <div class="filter-group">
+      <button onclick="setFilter('all')">All</button>
+      <button class="completed-filter" onclick="setFilter('completed')">Completed</button>
+      <button onclick="setFilter('pending')">Pending</button>
+      <button class="clear-all" onclick="clearAllTasks()">Clear All</button>
+    </div>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
